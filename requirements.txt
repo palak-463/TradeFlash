@@ -18,4 +18,3 @@ yfinance==0.1.71
 pandas-datareader==0.11.1
 vaderSentiment==3.3.2
 gunicorn==20.1.0
-flask==12.5.0
