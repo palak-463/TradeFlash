@@ -7,3 +7,12 @@
         {"src": "/(.*)", "dest": "stock.py"}
     ]
 }
+{
+  "functions": {
+    "api": {
+      "runtime": "python3.8",
+      "memory": 512
+    }
+  }
+}
+
