@@ -1,5 +1,5 @@
 {
-    "version": 2,
+    "version": 3.5,
     "builds": [
         {"src": "stock.py", "use": "@vercel/python"}
     ],
