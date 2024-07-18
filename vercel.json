@@ -1,18 +1,9 @@
 {
     "version": 2,
     "builds": [
-        {"src": "app.py", "use": "@vercel/python"}
+        {"src": "stock.py", "use": "@vercel/python"}
     ],
     "routes": [
         {"src": "/(.*)", "dest": "stock.py"}
     ]
 }
-{
-  "functions": {
-    "api": {
-      "runtime": "python3.8",
-      "memory": 512
-    }
-  }
-}
-
