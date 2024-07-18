@@ -1,5 +1,5 @@
 keras==2.8.0
-tensorflow==2.7.0
+tensorflow==2.12.5
 pandas==1.4.0
 numpy==1.22.2
 tqdm==4.69.0
@@ -18,7 +18,3 @@ yfinance==0.1.71
 pandas-datareader==0.11.1
 vaderSentiment==3.3.2
 gunicorn==20.1.0
-
-
-
-
