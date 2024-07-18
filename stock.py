@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('stocks.html')
 
 API_KEY = '669835009387f9.87422928'
 
