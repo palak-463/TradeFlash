@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Prices Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Stock Prices</h1>
+        <form method="POST" class="text-center mb-4">
+            <input type="text" name="search" class="form-control w-25 d-inline" placeholder="Search for a stock..." />
+            <input type="submit" class="btn btn-primary" value="Search" />
+        </form>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Stock Name</th>
+                    <th>Company Name</th>
+                    <th>Price (USD)</th>
+                    <th>Change (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for stock in stocks %}
+                <tr>
+                    <td>{{ stock['name'] }}</td>
+                    <td>{{ stock['company'] }}</td>
+                    <td>{{ stock['price'] }}</td>
+                    <td class="{{ 'text-success' if stock['change'] > 0 else 'text-danger' }}">{{ stock['change'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

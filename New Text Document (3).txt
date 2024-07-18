@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptocurrency Tracker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Cryptocurrency Tracker</h1>
+        <form class="form-inline my-4" method="POST">
+            <input class="form-control" type="text" name="search" placeholder="Search for a currency">
+            <button class="btn btn-primary ml-2" type="submit">Search</button>
+        </form>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price (USD)</th>
+                    <th>Change (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for coin in coins %}
+                <tr>
+                    <td>{{ coin.name }}</td>
+                    <td>${{ coin.current_price }}</td>
+                    <td>{{ coin.price_change_percentage_24h }}%</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
