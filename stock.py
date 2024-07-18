@@ -1,10 +1,8 @@
-from flask import Flask, render_template
+import pandas as pd
+import requests
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
-
-@app.route('/')
-def index():
-    return render_template('stocks.html')
 
 API_KEY = '669835009387f9.87422928'
 
@@ -13,7 +11,7 @@ STOCKS = {
     "AAPL": "Apple Inc.",
     "MSFT": "Microsoft Corporation",
     "AMZN": "Amazon.com Inc.",
-    "GOOGL": "Alphabet Inc.",
+    "GOOGL": "Google",
     "TSLA": "Tesla Inc.",
     "FB": "Meta Platforms Inc.",
     "BRK.B": "Berkshire Hathaway Inc.",
@@ -94,6 +92,5 @@ def index():
 
     return render_template('stocks.html', stocks=filtered_data)
 
-
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True, host='0.0.0.0', port=5001)
