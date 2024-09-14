@@ -17,7 +17,7 @@
 
 | Module           | Technologies Used         |
 |------------------|---------------------------|
-| **Frontend**     | JavaScript, HTML/CSS      |
+| **Frontend**     | JavaScript, HTML, CSS     |
 | **Backend**      | C++, C, Cython            |
 | **Data Fetching**| Python                    |
 
